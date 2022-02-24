@@ -23,9 +23,9 @@
   "homepage": "https://github.com/shamoon/cloudways-api-action#readme",
   "dependencies": {
     "@actions/core": "^1.5.0",
-    "node-fetch": "^2.6.1"
+    "node-fetch": "^2.6.7"
   },
   "devDependencies": {
-    "@vercel/ncc": "^0.29.2"
+    "@vercel/ncc": "^0.33.3"
   }
 }
