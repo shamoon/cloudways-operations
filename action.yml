@@ -1,4 +1,4 @@
-name: 'Cloudways API Operations'
+name: 'Cloudways Operations'
 description: 'Perform operations on Cloudways servers via Cloudways API'
 branding:
   color: "purple"

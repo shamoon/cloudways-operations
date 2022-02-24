@@ -1,4 +1,4 @@
-# Cloudways API Action
+# Cloudways Operations
 
 Perform certain operations on a Cloudways server via the [Cloudways API]((https://developers.cloudways.com/)). Please note that not all API operations are permitted.
 

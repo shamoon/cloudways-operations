@@ -1,5 +1,5 @@
 {
-  "name": "cloudways-api-action",
+  "name": "cloudways-operations",
   "version": "1.0.0",
   "description": "Github Action for Operations on Cloudways Servers via Cloudways API",
   "main": "index.js",
@@ -15,12 +15,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/shamoon/cloudways-api-action.git"
+    "url": "git+https://github.com/shamoon/cloudways-operations.git"
   },
   "bugs": {
-    "url": "https://github.com/shamoon/cloudways-api-action/issues"
+    "url": "https://github.com/shamoon/cloudways-operations/issues"
   },
-  "homepage": "https://github.com/shamoon/cloudways-api-action#readme",
+  "homepage": "https://github.com/shamoon/cloudways-operations#readme",
   "dependencies": {
     "@actions/core": "^1.5.0",
     "node-fetch": "^2.6.7"
