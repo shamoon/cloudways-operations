@@ -17,8 +17,8 @@ inputs:
     description: 'Cloudways API Operation'
     required: true
 outputs:
-  operation_id:
-    description: 'Cloudways API operation ID indicating success'
+  success:
+    description: 'A boolean indicating success'
 runs:
   using: 'node12'
   main: 'dist/index.js'
