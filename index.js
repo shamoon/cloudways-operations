@@ -70,7 +70,6 @@ async function command(endpointConfig, params, accessToken) {
   return await fetch(cloudwaysApiUrl + endpoint, options).then(response => {
 
     return response.json().then(data => {
-      core.info(JSON.stringify(data));
       return {
         ok: response.ok,
         code: response.status,
@@ -113,7 +112,7 @@ async function run() {
         throw new Error(response.body.error_description);
       }
 
-      core.info(`Success! Received response from Cloudways: ${ response.body }`);
+      core.info(`Success! Received response from Cloudways: ${ JSON.stringify(response.body) }`);
       core.setOutput('success', true);
     });
   } catch (error) {
