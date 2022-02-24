@@ -4618,8 +4618,8 @@ async function run() {
         throw new Error(response.body.error_description);
       }
 
-      core.info(`Success. Operation ID: ${ response.body.operation_id }`);
-      core.setOutput('operation', response.body.operation_id);
+      core.info(`Success! Received response from Cloudways: ${ response.body }`);
+      core.setOutput('success', true);
     });
   } catch (error) {
     core.setFailed(error.message);
