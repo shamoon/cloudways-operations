@@ -48,7 +48,7 @@ jobs:
       - name: Deploy
         ...
       - name: Purge Varnish
-        uses: shamoon/cloudways-api-action@main
+        uses: shamoon/cloudways-operations@main
         with:
           email: ${{ secrets.CLOUDWAYS_EMAIL }}
           api-key: ${{ secrets.CLOUDWAYS_API_KEY }}
