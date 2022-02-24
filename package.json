@@ -1,0 +1,31 @@
+{
+  "name": "cloudways-api-action",
+  "version": "1.0.0",
+  "description": "Github Action for Operations on Cloudways Servers via Cloudways API",
+  "main": "index.js",
+  "scripts": {
+    "prepare": "ncc build index.js --license licenses.txt"
+  },
+  "keywords": [
+    "GitHub",
+    "Actions",
+    "Cloudways"
+  ],
+  "author": "@shamoon",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shamoon/cloudways-api-action.git"
+  },
+  "bugs": {
+    "url": "https://github.com/shamoon/cloudways-api-action/issues"
+  },
+  "homepage": "https://github.com/shamoon/cloudways-api-action#readme",
+  "dependencies": {
+    "@actions/core": "^1.5.0",
+    "node-fetch": "^3.2.0"
+  },
+  "devDependencies": {
+    "@vercel/ncc": "^0.33.3"
+  }
+}

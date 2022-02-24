@@ -1,0 +1,24 @@
+name: 'Cloudways API Operations'
+description: 'Perform operations on Cloudways servers via Cloudways API'
+branding:
+  color: "purple"
+  icon: "cloud-lightning"
+inputs:
+  email:
+    description: 'Cloudways Account Email'
+    required: true
+  api-key:
+    description: 'Cloudways API Key'
+    required: true
+  server-id:
+    description: 'Cloudways Server ID'
+    required: true
+  operation:
+    description: 'Cloudways API Operation'
+    required: true
+outputs:
+  operation_id:
+    description: 'Cloudways API operation ID indicating success'
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
