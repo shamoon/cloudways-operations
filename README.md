@@ -25,7 +25,7 @@ Numeric ID of the server, can be found in the URL of web panel e.g.: *platform.c
 
 ##### 4. `operation` **[required]**
 
-Operations are specified with a dot notation and should include each parameter. **Order matters**, use the same order as specified above. E.g. `service.mysql.restart` or `purge_cdn.12345` (where *12345* represents the `app_id`).
+Operations are specified with a dot notation and should include each parameter. **Order matters**, use the same order as specified above. E.g. `service.mysql.restart` or `cdn_purge.12345` (where *12345* represents the `app_id`).
 
 ### Using Secrets
 
