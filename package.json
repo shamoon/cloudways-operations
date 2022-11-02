@@ -1,6 +1,6 @@
 {
   "name": "cloudways-operations",
-  "version": "1.0.0",
+  "version": "1.0.6",
   "description": "Github Action for Operations on Cloudways Servers via Cloudways API",
   "main": "index.js",
   "scripts": {
