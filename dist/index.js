@@ -4591,7 +4591,30 @@ function validateParameters(endpointConfig, params) {
 // most @actions toolkit packages have async methods
 async function run() {
   try {
-    const operationArgs = core.getInput('operation').split('.');
+    // Because apparently the API allows services with . now i.e. 'php8.0-fpm', see issue #1
+    const servicesUsingDotRegExps = [/php\d+\.\d+-fpm/];
+    var operationStr = core.getInput('operation');
+    var serviceStringReplacements = [];
+    
+    for (var i=0; i<servicesUsingDotRegExps.length; i++) {
+      const serviceRe = servicesUsingDotRegExps[i];
+			if (serviceRe.test(operationStr)) {
+        // store the service string containing a . and replace with e.g. $1 so we can safely split on .
+        const servicesUsingDotMatches = operationStr.match(serviceRe);
+      	serviceStringReplacements[i] = servicesUsingDotMatches[0];
+        operationStr = operationStr.replace(servicesUsingDotMatches[0], `$${i}`);
+      }
+    }
+    
+    const operationArgs = operationStr.split('.').map(arg => {
+      const placeholderMatches = arg.match(/\$(\d)+/);
+      if (placeholderMatches && placeholderMatches.length > 1) {
+        // restore the service string that was replaced with e.g. $1
+        arg = serviceStringReplacements[placeholderMatches[1]];
+      }
+      return arg;
+    });
+
     const operation = operationArgs.shift();
     const endpointConfig = supportedEndpoints[operation];
     if (!endpointConfig) throw new Error(`Cloudways API operation '${operation}' not understood`);

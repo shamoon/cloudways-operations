@@ -5,7 +5,7 @@ Perform certain operations on a Cloudways server via the [Cloudways API]((https:
 ## Supported Operations
 | Operation | Key | Parameters |
 | --------- | --- | ---------- |
-| [Change service state](https://developers.cloudways.com/docs/#!/ServiceApi#changeServiceState) | `service` | `service`: mysql, apache2, nginx, memcached, varnish, redis-server, php5-fpm, elasticsearch, supervisor <br/> `state`: start, stop, restart |
+| [Change service state](https://developers.cloudways.com/docs/#!/ServiceApi#changeServiceState) | `service` | `service`: mysql, apache2, nginx, memcached, varnish, redis-server, php*.*-fpm (e.g. php8.0-fpm), elasticsearch, supervisor <br/> `state`: start, stop, restart |
 | [Update server varnish state](https://developers.cloudways.com/docs/#!/ServiceApi#updateServerVarnishState) | `varnish` | `action`: enable, disable, purge |
 | [Purge Assets from Cloudways CDN](https://developers.cloudways.com/docs/#!/CloudwaysCDNApi#purgeassetsfromyourCloudwaysCDN) | `cdn_purge` | `app_id` |
 
